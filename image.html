@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incredible India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #e6d8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            background: rgba(15, 15, 15, 0.9);
+            border-radius: 20px;
+            overflow: hidden;
+            color: #fff;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+        /* Navbar */
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        nav h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 300;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #f3c76a;
+        }
+        /* Hero Section */
+        
+        .hero {
+            background: url('https://images.unsplash.com/photo-1577084380183-6c6d5ce66f64?auto=format&fit=crop&w=1200&q=60') center/cover no-repeat;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(3px);
+        }
+        
+        .hero h1 {
+            position: relative;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            letter-spacing: 3px;
+        }
+        
+        .hero h1 span {
+            color: #64b5f6;
+        }
+        
+        .hero p {
+            position: relative;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #ddd;
+        }
+        /* Destination Section */
+        
+        .destinations {
+            padding: 40px;
+        }
+        
+        .destinations h2 {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: #aaa;
+        }
+        
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .card {
+            width: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .card h3 {
+            text-align: center;
+            padding: 15px;
+            font-family: 'Playfair Display', serif;
+            color: #fff;
+            font-size: 1.2rem;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- <nav>
+            <h1>Incredible India</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav> -->
+
+        <section class="hero">
+            <h1>INCREDIBLE <span>INDIA</span></h1>
+            <p>Discover the magic, colors, and culture of the land of diversity — India.</p>
+        </section>
+
+        <section class="destinations">
+            <h2>DESTINATION</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1621268097870-4503740c9a70?auto=format&fit=crop&w=800&q=60" alt="Amritsar">
+                    <h3>AMRITSAR</h3>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1603264045924-cdfce0f2a1a5?auto=format&fit=crop&w=800&q=60" alt="Agra">
+                    <h3>AGRA</h3>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=60" alt="Mumbai">
+                    <h3>MUMBAI</h3>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

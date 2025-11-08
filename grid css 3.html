@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout with Media</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #f9fafb;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-areas: "header header header" "menu main right" "footer footer footer";
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 250px auto;
+            gap: 8px;
+            border: 5px solid #2196F3;
+            padding: 10px;
+            background: white;
+            width: 90%;
+            max-width: 1000px;
+        }
+        
+        .box {
+            background: #cfe8fc;
+            border: 3px solid #2196F3;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .header {
+            grid-area: header;
+            text-align: center;
+        }
+        
+        .header img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        
+        .menu {
+            grid-area: menu;
+        }
+        
+        .menu img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        
+        .menu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .menu li {
+            margin: 6px 0;
+            padding: 6px;
+            background: #fff;
+            border-radius: 4px;
+        }
+        
+        .main {
+            grid-area: main;
+        }
+        
+        .main img {
+            width: 100%;
+            border-radius: 6px;
+        }
+        
+        .main p {
+            margin-top: 8px;
+            font-weight: normal;
+        }
+        
+        .right {
+            grid-area: right;
+        }
+        
+        .right video {
+            width: 100%;
+            border-radius: 6px;
+        }
+        
+        .footer {
+            grid-area: footer;
+        }
+        
+        form {
+            display: grid;
+            gap: 10px;
+        }
+        
+        label {
+            font-size: 14px;
+            font-weight: normal;
+        }
+        
+        input,
+        select {
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        
+        button {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="box header">
+            <img src="https://picsum.photos/id/1015/800/200" alt="Banner">
+            <h2>Welcome to My Website</h2>
+        </div>
+
+        <!-- Menu -->
+        <div class="box menu">
+            <img src="https://picsum.photos/id/1005/400/200" alt="Menu Image">
+            <ul>
+                <li>Home</li>
+                <li>Products</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <!-- Main -->
+        <div class="box main">
+            <img src="https://picsum.photos/id/102/600/200" alt="Product">
+            <p>Fresh and organic fruits available for your healthy lifestyle. 🍎🍌</p>
+        </div>
+
+        <!-- Right -->
+        <div class="box right">
+            <video controls poster="https://picsum.photos/id/1060/400/200">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+        </div>
+
+        <!-- Footer -->
+        <div class="box footer">
+            <h3>Registration Form</h3>
+            <form>
+                <div>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div>
+                    <label for="role">Role</label>
+                    <select id="role">
+            <option>Viewer</option>
+            <option>Customer</option>
+          </select>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

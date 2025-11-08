@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title> Image Grid </title>
+    <style>
+        body {
+            background-color: rgb(10, 10, 10);
+        }
+        
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        }
+        
+        .general {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .item1 {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+        }
+        
+        .item2 {
+            grid-column: 2 / span 1;
+            grid-row: 1 / span 1;
+        }
+        
+        .item3 {
+            grid-column: 3 / span 1;
+            grid-row: 1 / span 2;
+        }
+        
+        .item4 {
+            grid-column: 4 / span 1;
+            grid-row: 1 / span 1;
+        }
+        
+        .item5 {
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 1;
+        }
+        
+        .item6 {
+            grid-column: 4 / span 1;
+            grid-row: 2 / span 2;
+        }
+        
+        .item7 {
+            grid-column: 1 / span 2;
+            grid-row: 3 / span 2;
+        }
+        
+        .item8 {
+            grid-column: 3 / span 1;
+            grid-row: 3 / span 1;
+        }
+        
+        .item9 {
+            grid-column: 3 / span 2;
+            grid-row: 4 / span 1;
+        }
+        
+        @supports(min-width: 825px) {
+            .parent {
+                margin: 20px 450px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <img class="general item1" src="https://i.pinimg.com/736x/10/27/b1/1027b1cc93cc1ec047af63f7c459ed66.jpg" />
+        <img class="general item2" src="https://i.pinimg.com/736x/56/ca/c6/56cac6cc9d139e65518c6bfa4718f2a3.jpg" />
+        <img class="general item3" src="https://i.pinimg.com/736x/50/0f/8d/500f8d0319033e340662fb247093ef5c.jpg" />
+        <img class="general item4" src="https://i.pinimg.com/736x/ff/a8/f0/ffa8f0f7640222c2ab1e695920ce249c.jpg" />
+        <img class="general item5" src="https://i.pinimg.com/736x/60/92/0f/60920fcfa9e2e9378185c428b87b363e.jpg" />
+        <img class="general item6" src="https://i.pinimg.com/736x/eb/e8/4a/ebe84aee1921acd4b5ed0b882fcf14ca.jpg" />
+        <img class="general item7" src="https://i.pinimg.com/736x/41/9d/94/419d94c82c5baa6688a894b9269dffee.jpg" />
+        <img class="general item8" src="https://i.pinimg.com/1200x/43/d8/fb/43d8fbc9e11a046e083a99a3856f13c2.jpg" />
+        <img class="general item9" src="https://i.pinimg.com/736x/fe/79/29/fe792949474ad11581470e2772d533a6.jpg" />
+    </div>
+</body>
+
+</html>
